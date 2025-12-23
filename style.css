@@ -308,7 +308,7 @@ nav {
 
 /* Main Hero - Gradient + Background Image */
 .hero {
-    background-image: url("Assets/images/Scenery1.webp");
+    background-image: url("/Assets/images/scenery1.webp");
     background-color: var(--color-bg-primary);
     padding-top: 48px;
 }
@@ -319,7 +319,7 @@ nav {
 
 /* Section 2 - Kinetic Type with Community */
 .hero-section2 {
-    background-image: url("Assets/images/Community.webp");
+    background-image: url("/Assets/images/community.webp");
     background-color: var(--color-bg-secondary);
     margin: 0;
 }
@@ -330,7 +330,7 @@ nav {
 
 /* Section 3 - Product Reveal with Scenery */
 .hero-section3 {
-    background-image: url("Assets/images/Scenery1.webp");
+    background-image: url("/Assets/images/scenery1.webp");
     background-color: var(--color-bg-primary);
 }
 
@@ -467,7 +467,7 @@ nav {
 /* Card Section 4 - Reset & Gather */
 .section4-1 {
     width: 50%;
-    background-image: url("Assets/images/Community2.webp");
+    background-image: url("/Assets/images/community2.webp");
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -479,7 +479,7 @@ nav {
 
 .section4-2 {
     width: 50%;
-    background-image: url("Assets/images/peopleGroup.webp");
+    background-image: url("/Assets/images/people-group.webp");
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -492,7 +492,7 @@ nav {
 /* Card Section 5 - Reflect & Create */
 .section5-1 {
     width: 50%;
-    background-image: url("Assets/images/Art.webp");
+    background-image: url("/Assets/images/art.webp");
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -504,7 +504,7 @@ nav {
 
 .section5-2 {
     width: 50%;
-    background-image: url("Assets/images/Community1.webp");
+    background-image: url("/Assets/images/community1.webp");
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -517,7 +517,7 @@ nav {
 /* Card Section 6 - Impact & CTA */
 .section6-1 {
     width: 50%;
-    background-image: url("Assets/images/gallery_1.webp");
+    background-image: url("/Assets/images/gallery-1.webp");
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -529,7 +529,7 @@ nav {
 
 .section6-2 {
     width: 50%;
-    background-image: url("Assets/images/Main banner.webp");
+    background-image: url("/Assets/images/main-banner.webp");
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -543,7 +543,7 @@ nav {
    SLIDER / GALLERY - SWIPER
    ========================================== */
 .slider {
-    background-image: url("Assets/images/peopleGroup.webp");
+    background-image: url("/Assets/images/people-group.webp");
     background-color: var(--color-bg-primary);
     background-size: cover;
     background-position: center;
@@ -630,31 +630,31 @@ nav {
 
 /* Slider Image Backgrounds */
 .s1 {
-    background-image: url("Assets/images/Community.webp");
+    background-image: url("/Assets/images/community.webp");
     background-size: cover;
     background-position: center;
 }
 
 .s2 {
-    background-image: url("Assets/images/Community1.webp");
+    background-image: url("/Assets/images/community1.webp");
     background-size: cover;
     background-position: center;
 }
 
 .s3 {
-    background-image: url("Assets/images/Community2.webp");
+    background-image: url("/Assets/images/community2.webp");
     background-size: cover;
     background-position: center;
 }
 
 .s4 {
-    background-image: url("Assets/images/gallery_1.webp");
+    background-image: url("/Assets/images/gallery-1.webp");
     background-size: cover;
     background-position: center;
 }
 
 .s5 {
-    background-image: url("Assets/images/Main banner.webp");
+    background-image: url("/Assets/images/main-banner.webp");
     background-size: cover;
     background-position: center;
 }
