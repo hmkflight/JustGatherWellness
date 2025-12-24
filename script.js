@@ -118,14 +118,14 @@ ScrollTrigger.create({
   scroller: "body",
   onEnter: () => {
     gsap.to("nav", {
-      background: "rgba(10, 10, 10, 0.95)",
+      background: "rgba(249, 247, 244, 0.98)",
       duration: 0.6,
       ease: slowEase
     });
   },
   onLeaveBack: () => {
     gsap.to("nav", {
-      background: "rgba(10, 10, 10, 0.85)",
+      background: "rgba(249, 247, 244, 0.92)",
       duration: 0.6,
       ease: slowEase
     });
