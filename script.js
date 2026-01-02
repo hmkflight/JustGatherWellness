@@ -31,28 +31,6 @@ ScrollTrigger.refresh();
 }
 loco()
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "1.2",
-  centeredSlides: true,
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-      keyboard: true,
-      loop:true,
-      speed: 800
-});
-
-
 var menu = document.querySelector(".ri-menu-line");
 var close = document.querySelector(".ri-close-line");
 var navbar = document.querySelector(".subnav");
@@ -168,21 +146,7 @@ gsap.utils.toArray([".hero-section4"]).forEach((section) => {
   });
 });
 
-// 5. SLIDER SECTION - Gentle Fade In
-gsap.from(".slider", {
-  scrollTrigger: {
-    trigger: ".slider",
-    start: "top 80%",
-    scroller: "body",
-    scrub: false
-  },
-  opacity: 0,
-  y: 60,
-  duration: 1.5,
-  ease: cinematicEase
-});
-
-// 6. FOOTER - Subtle Reveal
+// 5. FOOTER - Subtle Reveal
 gsap.from(".minimal-footer", {
   scrollTrigger: {
     trigger: ".minimal-footer",
@@ -196,7 +160,7 @@ gsap.from(".minimal-footer", {
   ease: cinematicEase
 });
 
-// 7. LINKS HOVER - Smooth Scale (Premium Touch)
+// 6. LINKS HOVER - Smooth Scale (Premium Touch)
 document.querySelectorAll(".links a").forEach((link) => {
   link.addEventListener("mouseenter", function() {
     gsap.to(this, {

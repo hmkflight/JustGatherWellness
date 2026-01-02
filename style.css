@@ -578,132 +578,6 @@ nav {
 }
 
 /* ==========================================
-   SLIDER / GALLERY - SWIPER
-   ========================================== */
-.slider {
-    background-image: url("/Assets/images/people-group.webp");
-    background-color: var(--color-bg-primary);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 80vh;
-    width: 100%;
-    padding: var(--space-xl) 0;
-    position: relative;
-}
-
-.slider::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(26,41,56,0.8) 0%, rgba(26,41,56,0.85) 100%);
-    z-index: 0;
-}
-
-.slider > * {
-    position: relative;
-    z-index: 1;
-}
-
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: var(--color-navy-medium);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(107, 155, 135, 0.15);
-}
-
-.swiper-slide::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(26,41,56,0.5) 100%);
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.swiper-slide {
-    width: 60%;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: var(--color-text-primary);
-    background: rgba(26, 41, 56, 0.75);
-    backdrop-filter: blur(12px);
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 1px solid rgba(107, 155, 135, 0.2);
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    font-size: 1.2rem;
-}
-
-.swiper-pagination-bullet {
-    background: var(--color-text-tertiary);
-    opacity: 0.4;
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--color-accent);
-    opacity: 1;
-}
-
-/* Slider Image Backgrounds */
-.s1 {
-    background-image: url("/Assets/images/community.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-.s2 {
-    background-image: url("/Assets/images/community1.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-.s3 {
-    background-image: url("/Assets/images/community2.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-.s4 {
-    background-image: url("/Assets/images/gallery-1.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-.s5 {
-    background-image: url("/Assets/images/main-banner.webp");
-    background-size: cover;
-    background-position: center;
-}
-
-/* ==========================================
    MINIMAL FOOTER - PREMIUM
    ========================================== */
 .minimal-footer {
@@ -970,10 +844,6 @@ footer:not(.minimal-footer) {
         gap: var(--space-sm);
     }
 
-    .swiper-slide {
-        width: 90%;
-    }
-
     .jg-showcase {
         padding: 48px 0;
     }
@@ -1000,10 +870,6 @@ footer:not(.minimal-footer) {
 
     .hero {
         min-height: 100vh;
-    }
-
-    .slider {
-        min-height: 60vh;
     }
 
     .jg-showcase {
