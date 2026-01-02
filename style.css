@@ -147,15 +147,17 @@ nav {
 }
 
 .nav-logo {
-    height: 32px;
+    height: 52px;
     width: auto;
     margin-right: var(--space-sm);
-    opacity: 0.85;
+    opacity: 0.98;
     transition: var(--transition-base);
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
 }
 
 .nav-logo:hover {
     opacity: 1;
+    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.2)) drop-shadow(0 1px 4px rgba(0, 0, 0, 0.12));
 }
 
 .nav-items a {
@@ -772,6 +774,13 @@ footer:not(.minimal-footer) {
     display: none;
 }
 
+/* Tablet Breakpoint - Logo Scaling */
+@media (max-width: 1024px) {
+    .nav-logo {
+        height: 44px;
+    }
+}
+
 @media (max-width: 768px) {
     :root {
         --space-lg: 2rem;
@@ -790,7 +799,7 @@ footer:not(.minimal-footer) {
     }
 
     .nav-logo {
-        height: 28px;
+        height: 38px;
         margin-right: auto;
     }
 
