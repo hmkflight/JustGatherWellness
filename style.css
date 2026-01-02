@@ -140,6 +140,18 @@ nav {
     padding: 0 var(--space-md);
 }
 
+.nav-logo {
+    height: 32px;
+    width: auto;
+    margin-right: var(--space-sm);
+    opacity: 0.85;
+    transition: var(--transition-base);
+}
+
+.nav-logo:hover {
+    opacity: 1;
+}
+
 .nav-items a {
     text-decoration: none;
     padding: var(--space-xs) var(--space-sm);
@@ -388,6 +400,16 @@ nav {
     color: var(--color-text-secondary);
     line-height: 1.6;
     letter-spacing: 0.01em;
+}
+
+/* CTA Logo - Brand Seal */
+.cta-logo {
+    width: clamp(80px, 12vw, 120px);
+    height: auto;
+    opacity: 0.75;
+    margin-bottom: var(--space-lg);
+    filter: grayscale(0.2);
+    transition: var(--transition-smooth);
 }
 
 /* Text Color Variants */
@@ -758,7 +780,12 @@ footer:not(.minimal-footer) {
         justify-content: space-between;
     }
 
-    .nav-items a:not(#Store) {
+    .nav-logo {
+        height: 28px;
+        margin-right: auto;
+    }
+
+    .nav-items a {
         display: none;
     }
 
@@ -769,6 +796,11 @@ footer:not(.minimal-footer) {
     .ri-menu-line {
         display: block;
         color: var(--color-text-primary);
+    }
+
+    .cta-logo {
+        width: clamp(60px, 15vw, 100px);
+        margin-bottom: var(--space-md);
     }
 
     .hero-section-p {
