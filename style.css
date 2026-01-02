@@ -570,15 +570,7 @@ nav {
     background-image: url("/Assets/images/main-banner.webp");
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.section6-2 .hero-section-img {
-    flex-direction: column;
-    padding: var(--space-xl) var(--space-md);
-    gap: var(--space-xl);
+    min-height: 70vh;
 }
 
 .section6-2::before {
@@ -666,10 +658,9 @@ footer:not(.minimal-footer) {
 .jg-showcase {
     position: relative;
     width: 100%;
-    padding: 0;
-    background: transparent;
-    overflow: visible;
-    margin-top: auto;
+    padding: 64px 0;
+    background: var(--color-bg-primary);
+    overflow: hidden;
 }
 
 .jg-showcase__viewport {
@@ -736,12 +727,12 @@ footer:not(.minimal-footer) {
 
 .jg-showcase__fade--left {
     left: 0;
-    background: linear-gradient(to right, rgba(26,41,56,0.75) 0%, transparent 100%);
+    background: linear-gradient(to right, var(--color-bg-primary) 0%, transparent 100%);
 }
 
 .jg-showcase__fade--right {
     right: 0;
-    background: linear-gradient(to left, rgba(26,41,56,0.75) 0%, transparent 100%);
+    background: linear-gradient(to left, var(--color-bg-primary) 0%, transparent 100%);
 }
 
 /* ==========================================
@@ -830,19 +821,10 @@ footer:not(.minimal-footer) {
     .section4-2,
     .section5-1,
     .section5-2,
-    .section6-1 {
-        width: 100%;
-        min-height: 60vh;
-    }
-
+    .section6-1,
     .section6-2 {
         width: 100%;
-        min-height: 100vh;
-    }
-
-    .section6-2 .hero-section-img {
-        padding: var(--space-lg) var(--space-sm);
-        gap: var(--space-lg);
+        min-height: 60vh;
     }
 
     .nav-top-store {
@@ -860,6 +842,10 @@ footer:not(.minimal-footer) {
     .footer-center {
         flex-direction: column;
         gap: var(--space-sm);
+    }
+
+    .jg-showcase {
+        padding: 48px 0;
     }
 
     .jg-showcase__item {
@@ -886,13 +872,8 @@ footer:not(.minimal-footer) {
         min-height: 100vh;
     }
 
-    .section6-2 {
-        min-height: 100vh;
-    }
-
-    .section6-2 .hero-section-img {
-        padding: var(--space-md) var(--space-sm);
-        gap: var(--space-md);
+    .jg-showcase {
+        padding: 32px 0;
     }
 
     .jg-showcase__item {
