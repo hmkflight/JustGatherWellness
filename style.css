@@ -9,22 +9,28 @@
 
 /* CSS VARIABLES - DESIGN SYSTEM */
 :root {
-    /* Colors - Warm Neutral Palette (Sunrise + Sage) */
-    --color-bg-primary: #f9f7f4;
-    --color-bg-secondary: #f2ede7;
-    --color-bg-tertiary: #ebe5dd;
-    --color-text-primary: #2d2a26;
-    --color-text-secondary: #6b6560;
-    --color-text-tertiary: #9c938c;
-    --color-accent: #7a9b76;
-    --color-accent-dim: #8fae8a;
-    --color-warm-overlay: rgba(249, 247, 244, 0.85);
-    --color-sage-overlay: rgba(122, 155, 118, 0.08);
+    /* Colors - Navy Wellness Palette */
+    --color-navy-deep: #1a2938;
+    --color-navy-medium: #243447;
+    --color-navy-light: #2f4156;
+    --color-bg-primary: #1a2938;
+    --color-bg-secondary: #f8f6f3;
+    --color-bg-tertiary: #ede9e4;
+    --color-text-primary: #f4f5f7;
+    --color-text-secondary: #b8c1cc;
+    --color-text-tertiary: #8a95a3;
+    --color-text-on-light: #1a2938;
+    --color-text-on-light-secondary: #4a5866;
+    --color-accent: #6b9b87;
+    --color-accent-dim: #7fae99;
+    --color-navy-overlay: rgba(26, 41, 56, 0.75);
+    --color-sage-overlay: rgba(107, 155, 135, 0.12);
 
-    /* Glass Effect - Frosted Light */
-    --glass-bg: rgba(255, 255, 255, 0.6);
-    --glass-border: rgba(122, 155, 118, 0.15);
-    --glass-blur: 12px;
+    /* Glass Effect - Navy Frosted */
+    --glass-bg: rgba(26, 41, 56, 0.65);
+    --glass-bg-light: rgba(248, 246, 243, 0.85);
+    --glass-border: rgba(107, 155, 135, 0.2);
+    --glass-blur: 16px;
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -79,7 +85,7 @@ body {
     position: relative;
 }
 
-/* Subtle warm texture overlay */
+/* Subtle texture overlay */
 body::after {
     content: '';
     position: fixed;
@@ -88,11 +94,11 @@ body::after {
     width: 100%;
     height: 100%;
     background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(122,155,118,0.008) 2px, rgba(122,155,118,0.008) 4px),
-        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(122,155,118,0.008) 2px, rgba(122,155,118,0.008) 4px);
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(107,155,135,0.01) 2px, rgba(107,155,135,0.01) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(107,155,135,0.01) 2px, rgba(107,155,135,0.01) 4px);
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.15;
+    opacity: 0.2;
 }
 
 /* ==========================================
@@ -112,14 +118,14 @@ body::after {
 }
 
 /* ==========================================
-   NAVIGATION - FROSTED LIGHT
+   NAVIGATION - NAVY GLASS
    ========================================== */
 nav {
     height: 48px;
-    background: rgba(249, 247, 244, 0.92);
+    background: rgba(26, 41, 56, 0.92);
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
-    border-bottom: 1px solid rgba(122, 155, 118, 0.12);
+    border-bottom: 1px solid rgba(107, 155, 135, 0.15);
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -130,7 +136,7 @@ nav {
     left: 0;
     z-index: 99;
     transition: var(--transition-base);
-    box-shadow: 0 2px 12px rgba(122, 155, 118, 0.06);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
 }
 
 .nav-items {
@@ -210,14 +216,14 @@ nav {
 
 .nav-top {
     height: 50vh;
-    background-color: rgba(249, 247, 244, 0.98);
+    background-color: rgba(26, 41, 56, 0.98);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
 }
 
 .nav-bottom {
     height: 50vh;
-    background: rgba(249, 247, 244, 0.6);
+    background: rgba(26, 41, 56, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
@@ -268,7 +274,7 @@ nav {
     position: fixed;
     top: -109%;
     z-index: 99;
-    background-color: rgba(249, 247, 244, 0.98);
+    background-color: rgba(26, 41, 56, 0.98);
     backdrop-filter: blur(40px);
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
 }
@@ -309,7 +315,7 @@ nav {
     overflow: hidden;
 }
 
-/* Warm light overlay for all hero sections */
+/* Navy-tinted overlay for all hero sections */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -317,7 +323,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(249,247,244,0.25) 0%, rgba(249,247,244,0.45) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.65) 0%, rgba(26,41,56,0.75) 100%);
     z-index: 1;
 }
 
@@ -329,18 +335,18 @@ nav {
 }
 
 .hero::before {
-    background: linear-gradient(135deg, rgba(249,247,244,0.5) 0%, rgba(122,155,118,0.15) 50%, rgba(249,247,244,0.6) 100%);
+    background: linear-gradient(135deg, rgba(26,41,56,0.7) 0%, rgba(36,52,71,0.65) 50%, rgba(26,41,56,0.75) 100%);
 }
 
 /* Section 2 - Kinetic Type with Community */
 .hero-section2 {
     background-image: url("/Assets/images/community.webp");
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-primary);
     margin: 0;
 }
 
 .hero-section2::before {
-    background: linear-gradient(180deg, rgba(249,247,244,0.4) 0%, rgba(249,247,244,0.5) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.7) 0%, rgba(26,41,56,0.8) 100%);
 }
 
 /* Section 3 - Product Reveal with Scenery */
@@ -350,7 +356,7 @@ nav {
 }
 
 .hero-section3::before {
-    background: linear-gradient(180deg, rgba(249,247,244,0.35) 0%, rgba(249,247,244,0.45) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.65) 0%, rgba(26,41,56,0.75) 100%);
 }
 
 .hero-section-img {
@@ -381,16 +387,17 @@ nav {
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 700;
     line-height: 1.1;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
     margin: 0;
     color: var(--color-text-primary);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .hero-section-p h3 {
     font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: 400;
     line-height: 1.4;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em;
     color: var(--color-text-secondary);
     max-width: 800px;
 }
@@ -399,7 +406,7 @@ nav {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     color: var(--color-text-secondary);
     line-height: 1.6;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em;
 }
 
 /* CTA Logo - Brand Seal */
@@ -455,23 +462,23 @@ nav {
     font-size: var(--text-lg);
     font-weight: 500;
     padding: 0.75rem 2rem;
-    border: 1px solid rgba(122, 155, 118, 0.2);
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(107, 155, 135, 0.3);
+    background: rgba(107, 155, 135, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-full);
     transition: var(--transition-base);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 2px 8px rgba(122, 155, 118, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .links a:hover {
-    background: rgba(122, 155, 118, 0.15);
-    border-color: rgba(122, 155, 118, 0.3);
+    background: rgba(107, 155, 135, 0.25);
+    border-color: rgba(107, 155, 135, 0.4);
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(122, 155, 118, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .links a i {
@@ -503,7 +510,7 @@ nav {
 }
 
 .section4-1::before {
-    background: linear-gradient(180deg, rgba(249,247,244,0.3) 0%, rgba(249,247,244,0.5) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.6) 0%, rgba(26,41,56,0.75) 100%);
 }
 
 .section4-2 {
@@ -515,7 +522,7 @@ nav {
 }
 
 .section4-2::before {
-    background: linear-gradient(180deg, rgba(249,247,244,0.3) 0%, rgba(249,247,244,0.5) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.6) 0%, rgba(26,41,56,0.75) 100%);
 }
 
 /* Card Section 5 - Reflect & Create */
@@ -528,7 +535,7 @@ nav {
 }
 
 .section5-1::before {
-    background: linear-gradient(180deg, rgba(249,247,244,0.35) 0%, rgba(249,247,244,0.55) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.65) 0%, rgba(26,41,56,0.8) 100%);
 }
 
 .section5-2 {
@@ -540,7 +547,7 @@ nav {
 }
 
 .section5-2::before {
-    background: linear-gradient(180deg, rgba(249,247,244,0.35) 0%, rgba(249,247,244,0.55) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.65) 0%, rgba(26,41,56,0.8) 100%);
 }
 
 /* Card Section 6 - Impact & CTA */
@@ -553,7 +560,7 @@ nav {
 }
 
 .section6-1::before {
-    background: linear-gradient(180deg, rgba(249,247,244,0.4) 0%, rgba(249,247,244,0.6) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.7) 0%, rgba(26,41,56,0.85) 100%);
 }
 
 .section6-2 {
@@ -565,7 +572,7 @@ nav {
 }
 
 .section6-2::before {
-    background: linear-gradient(180deg, rgba(249,247,244,0.3) 0%, rgba(249,247,244,0.5) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.6) 0%, rgba(26,41,56,0.75) 100%);
 }
 
 /* ==========================================
@@ -590,7 +597,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(249,247,244,0.6) 0%, rgba(249,247,244,0.7) 100%);
+    background: linear-gradient(180deg, rgba(26,41,56,0.8) 0%, rgba(26,41,56,0.85) 100%);
     z-index: 0;
 }
 
@@ -607,21 +614,22 @@ nav {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: var(--color-bg-secondary);
+    background: var(--color-navy-medium);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: var(--radius-lg);
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 20px rgba(122, 155, 118, 0.12);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(107, 155, 135, 0.15);
 }
 
 .swiper-slide::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(249,247,244,0.3) 100%);
+    background: linear-gradient(180deg, transparent 60%, rgba(26,41,56,0.5) 100%);
 }
 
 .swiper-slide img {
@@ -638,12 +646,13 @@ nav {
 .swiper-button-next,
 .swiper-button-prev {
     color: var(--color-text-primary);
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
+    background: rgba(26, 41, 56, 0.75);
+    backdrop-filter: blur(12px);
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    box-shadow: 0 2px 12px rgba(122, 155, 118, 0.1);
+    border: 1px solid rgba(107, 155, 135, 0.2);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-button-next::after,
@@ -653,7 +662,7 @@ nav {
 
 .swiper-pagination-bullet {
     background: var(--color-text-tertiary);
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .swiper-pagination-bullet-active {
@@ -696,8 +705,8 @@ nav {
    MINIMAL FOOTER - PREMIUM
    ========================================== */
 .minimal-footer {
-    background: var(--color-bg-secondary);
-    border-top: 1px solid rgba(122, 155, 118, 0.15);
+    background: var(--color-navy-deep);
+    border-top: 1px solid rgba(107, 155, 135, 0.2);
     padding: var(--space-lg) var(--space-md);
     color: var(--color-text-secondary);
 }
