@@ -713,6 +713,7 @@ footer:not(.minimal-footer) {
     object-position: center;
     user-select: none;
     -webkit-user-drag: none;
+    /* DEBUG */ outline: 2px solid red; background: rgba(255,0,0,0.08);
 }
 
 /* Edge fade overlays */
