@@ -768,6 +768,77 @@ footer:not(.minimal-footer) {
 }
 
 /* ==========================================
+   INFINITE SHOWCASE SCROLLER
+   ========================================== */
+.showcase {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    padding: var(--space-xl) 0;
+    background: var(--color-bg-primary);
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+/* Edge fade gradients */
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.showcase::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg-primary) 0%, transparent 100%);
+}
+
+.showcase::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg-primary) 0%, transparent 100%);
+}
+
+.showcase-track {
+    display: flex;
+    gap: var(--space-md);
+    width: max-content;
+    will-change: transform;
+}
+
+.showcase-item {
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+}
+
+.showcase-media {
+    position: relative;
+    width: auto;
+    height: 360px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--color-navy-medium);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-base);
+}
+
+.showcase-media:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.showcase-media img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================
    RESPONSIVE - MOBILE
    ========================================== */
 .ri-menu-line {
@@ -879,6 +950,20 @@ footer:not(.minimal-footer) {
     .swiper-slide {
         width: 90%;
     }
+
+    .showcase {
+        min-height: 380px;
+        padding: var(--space-lg) 0;
+    }
+
+    .showcase-media {
+        height: 300px;
+    }
+
+    .showcase::before,
+    .showcase::after {
+        width: 60px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -892,5 +977,18 @@ footer:not(.minimal-footer) {
 
     .slider {
         min-height: 60vh;
+    }
+
+    .showcase {
+        min-height: 320px;
+        padding: var(--space-md) 0;
+    }
+
+    .showcase-media {
+        height: 280px;
+    }
+
+    .showcase-track {
+        gap: var(--space-sm);
     }
 }

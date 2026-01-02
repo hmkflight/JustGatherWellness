@@ -214,3 +214,31 @@ document.querySelectorAll(".links a").forEach((link) => {
     });
   });
 });
+
+// 8. INFINITE SHOWCASE SCROLLER
+const showcaseTrack = document.querySelector(".showcase-track");
+
+if (showcaseTrack) {
+  // Calculate the width of half the track (since we duplicated items)
+  const trackWidth = showcaseTrack.scrollWidth / 2;
+
+  // Create infinite loop animation
+  gsap.to(showcaseTrack, {
+    x: -trackWidth,
+    duration: 60,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize(x => parseFloat(x) % trackWidth)
+    }
+  });
+
+  // Pause on hover
+  showcaseTrack.addEventListener("mouseenter", () => {
+    gsap.to(showcaseTrack, { timeScale: 0.2, duration: 0.6 });
+  });
+
+  showcaseTrack.addEventListener("mouseleave", () => {
+    gsap.to(showcaseTrack, { timeScale: 1, duration: 0.6 });
+  });
+}
