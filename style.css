@@ -768,74 +768,97 @@ footer:not(.minimal-footer) {
 }
 
 /* ==========================================
-   INFINITE SHOWCASE SCROLLER
+   INFINITE PORTRAIT SHOWCASE
    ========================================== */
-.showcase {
-    position: relative;
-    width: 100%;
-    min-height: 480px;
-    padding: var(--space-xl) 0;
-    background: var(--color-bg-primary);
-    overflow-x: hidden;
-    overflow-y: visible;
+
+/* Keyframe animation for infinite scroll */
+@keyframes jg-showcase-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
-/* Edge fade gradients */
-.showcase::before,
-.showcase::after {
-    content: '';
+.jg-showcase {
+    position: relative;
+    width: 100%;
+    padding: 64px 0;
+    background: var(--color-bg-primary);
+    overflow: hidden;
+}
+
+.jg-showcase__viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.jg-showcase__track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    align-items: stretch;
+    width: max-content;
+    animation: jg-showcase-scroll 120s linear infinite;
+    will-change: transform;
+}
+
+.jg-showcase__track:hover {
+    animation-play-state: paused;
+}
+
+.jg-showcase__set {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+}
+
+.jg-showcase__item {
+    flex: 0 0 auto;
+    width: clamp(180px, 18vw, 260px);
+    height: clamp(270px, 32vw, 380px);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--color-navy-medium);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jg-showcase__item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.jg-showcase__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Edge fade overlays */
+.jg-showcase__fade {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 120px;
+    width: 140px;
     z-index: 2;
     pointer-events: none;
 }
 
-.showcase::before {
+.jg-showcase__fade--left {
     left: 0;
     background: linear-gradient(to right, var(--color-bg-primary) 0%, transparent 100%);
 }
 
-.showcase::after {
+.jg-showcase__fade--right {
     right: 0;
     background: linear-gradient(to left, var(--color-bg-primary) 0%, transparent 100%);
-}
-
-.showcase-track {
-    display: flex;
-    gap: var(--space-md);
-    width: max-content;
-    will-change: transform;
-}
-
-.showcase-item {
-    flex-shrink: 0;
-    width: auto;
-    height: auto;
-}
-
-.showcase-media {
-    position: relative;
-    width: auto;
-    height: 360px;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    background: var(--color-navy-medium);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    transition: var(--transition-base);
-}
-
-.showcase-media:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-}
-
-.showcase-media img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 /* ==========================================
@@ -951,18 +974,22 @@ footer:not(.minimal-footer) {
         width: 90%;
     }
 
-    .showcase {
-        min-height: 380px;
-        padding: var(--space-lg) 0;
+    .jg-showcase {
+        padding: 48px 0;
     }
 
-    .showcase-media {
-        height: 300px;
+    .jg-showcase__item {
+        width: clamp(160px, 22vw, 220px);
+        height: clamp(240px, 36vw, 340px);
     }
 
-    .showcase::before,
-    .showcase::after {
-        width: 60px;
+    .jg-showcase__fade {
+        width: 80px;
+    }
+
+    .jg-showcase__track,
+    .jg-showcase__set {
+        gap: 18px;
     }
 }
 
@@ -979,16 +1006,25 @@ footer:not(.minimal-footer) {
         min-height: 60vh;
     }
 
-    .showcase {
-        min-height: 320px;
-        padding: var(--space-md) 0;
+    .jg-showcase {
+        padding: 32px 0;
     }
 
-    .showcase-media {
-        height: 280px;
+    .jg-showcase__item {
+        width: clamp(140px, 28vw, 180px);
+        height: clamp(210px, 42vw, 280px);
     }
 
-    .showcase-track {
-        gap: var(--space-sm);
+    .jg-showcase__fade {
+        width: 40px;
+    }
+
+    .jg-showcase__track,
+    .jg-showcase__set {
+        gap: 14px;
+    }
+
+    .jg-showcase__track {
+        animation-duration: 80s;
     }
 }
