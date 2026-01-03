@@ -730,7 +730,6 @@ footer:not(.minimal-footer) {
     z-index: 1;
     user-select: none;
     -webkit-user-drag: none;
-    /* TEMP DEBUG */ outline: 3px solid red; background: lime;
 }
 
 /* Edge fade overlays */
