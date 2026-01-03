@@ -121,7 +121,7 @@ body::after {
    NAVIGATION - NAVY GLASS
    ========================================== */
 nav {
-    height: 48px;
+    height: 110px;
     background: rgba(26, 41, 56, 0.92);
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
@@ -147,17 +147,18 @@ nav {
 }
 
 .nav-logo {
-    height: 52px;
+    height: 88px;
     width: auto;
-    margin-right: var(--space-sm);
-    opacity: 0.98;
+    margin-right: var(--space-md);
+    opacity: 1;
     transition: var(--transition-base);
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
 }
 
 .nav-logo:hover {
     opacity: 1;
-    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.2)) drop-shadow(0 1px 4px rgba(0, 0, 0, 0.12));
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.18));
+    transform: translateY(-1px);
 }
 
 .nav-items a {
@@ -333,11 +334,20 @@ nav {
 .hero {
     background-image: url("/Assets/images/scenery1.webp");
     background-color: var(--color-bg-primary);
-    padding-top: 48px;
+    padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero::before {
     background: linear-gradient(135deg, rgba(26,41,56,0.7) 0%, rgba(36,52,71,0.65) 50%, rgba(26,41,56,0.75) 100%);
+}
+
+.hero .hero-section-p {
+    gap: 2.5rem;
+    padding: var(--space-2xl) var(--space-xl);
 }
 
 /* Section 2 - Kinetic Type with Community */
@@ -378,8 +388,8 @@ nav {
     flex-direction: column;
     text-align: center;
     color: var(--color-text-primary);
-    gap: 1.5rem;
-    padding: var(--space-lg);
+    gap: 2rem;
+    padding: var(--space-xl) var(--space-lg);
     max-width: 1200px;
     position: relative;
     z-index: 2;
@@ -745,7 +755,7 @@ footer:not(.minimal-footer) {
 /* Tablet Breakpoint - Logo Scaling */
 @media (max-width: 1024px) {
     .nav-logo {
-        height: 44px;
+        height: 70px;
     }
 }
 
@@ -757,6 +767,7 @@ footer:not(.minimal-footer) {
     }
 
     nav {
+        height: 80px;
         justify-content: space-between;
         padding: 0 var(--space-sm);
     }
@@ -767,7 +778,7 @@ footer:not(.minimal-footer) {
     }
 
     .nav-logo {
-        height: 38px;
+        height: 56px;
         margin-right: auto;
     }
 
@@ -787,6 +798,15 @@ footer:not(.minimal-footer) {
     .cta-logo {
         width: clamp(60px, 15vw, 100px);
         margin-bottom: var(--space-md);
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero .hero-section-p {
+        gap: 2rem;
+        padding: var(--space-xl) var(--space-md);
     }
 
     .hero-section-p {
