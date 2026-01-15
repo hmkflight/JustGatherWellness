@@ -920,3 +920,33 @@ footer:not(.minimal-footer) {
         animation-duration: 80s;
     }
 }
+
+/* ==========================================
+   PLACEHOLDER SECTIONS
+   ========================================== */
+.placeholder-section {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-primary);
+    padding: var(--space-xl) var(--space-md);
+}
+
+.placeholder-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.placeholder-content h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.placeholder-content p {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+}
