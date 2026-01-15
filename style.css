@@ -957,20 +957,23 @@ footer:not(.minimal-footer) {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Secondary text link style */
-.links a.text-link {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0.5rem 1rem;
-    font-weight: 400;
-    opacity: 0.85;
+/* ==========================================
+   BOTTOM TILES ALIGNMENT
+   ========================================== */
+.bottom-tiles .hero-section-p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
 }
 
-.links a.text-link:hover {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    opacity: 1;
-    transform: none;
+.bottom-tiles .links {
+    margin-top: auto;
+    padding-top: var(--space-md);
+}
+
+/* Ensure consistent CTA spacing across all sections */
+.hero-section-p .links {
+    margin-top: var(--space-md);
 }
