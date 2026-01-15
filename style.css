@@ -922,31 +922,55 @@ footer:not(.minimal-footer) {
 }
 
 /* ==========================================
-   PLACEHOLDER SECTIONS
+   GRID CTA SECTION
    ========================================== */
-.placeholder-section {
-    min-height: 50vh;
+.grid-cta {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding: var(--space-lg) var(--space-md);
     background: var(--color-bg-primary);
-    padding: var(--space-xl) var(--space-md);
 }
 
-.placeholder-content {
-    text-align: center;
-    max-width: 800px;
-}
-
-.placeholder-content h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 600;
+.grid-cta-button {
     color: var(--color-text-primary);
-    margin-bottom: var(--space-sm);
+    text-decoration: none;
+    font-size: var(--text-lg);
+    font-weight: 500;
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(107, 155, 135, 0.3);
+    background: rgba(107, 155, 135, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius-full);
+    transition: var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
-.placeholder-content p {
-    font-size: var(--text-lg);
-    color: var(--color-text-secondary);
+.grid-cta-button:hover {
+    background: rgba(107, 155, 135, 0.25);
+    border-color: rgba(107, 155, 135, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Secondary text link style */
+.links a.text-link {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.links a.text-link:hover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
 }
