@@ -332,7 +332,7 @@ nav {
 
 /* Main Hero - Gradient + Background Image */
 .hero {
-    background-image: url("/Assets/images/scenery1.webp");
+    background-image: url("/Assets/images/places-backgrounds/scenery1.webp");
     background-color: var(--color-bg-primary);
     padding-top: 80px;
     min-height: 100vh;
@@ -352,7 +352,7 @@ nav {
 
 /* Section 2 - Kinetic Type with Community */
 .hero-section2 {
-    background-image: url("/Assets/images/community.webp");
+    background-image: url("/Assets/images/community/community.webp");
     background-color: var(--color-bg-primary);
     margin: 0;
 }
@@ -363,7 +363,7 @@ nav {
 
 /* Section 3 - Product Reveal with Scenery */
 .hero-section3 {
-    background-image: url("/Assets/images/scenery1.webp");
+    background-image: url("/Assets/images/places-backgrounds/scenery1.webp");
     background-color: var(--color-bg-primary);
 }
 
@@ -515,7 +515,7 @@ nav {
 /* Card Section 4 - Reset & Gather */
 .section4-1 {
     width: 50%;
-    background-image: url("/Assets/images/community/community2.webp");
+    background-image: url("/Assets/images/places-backgrounds/place1.jpg");
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -552,7 +552,7 @@ nav {
 
 .section5-2 {
     width: 50%;
-    background-image: url("/Assets/images/community/community1.webp");
+    background-image: url("/Assets/images/community/people4.jpg");
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -1196,6 +1196,22 @@ footer:not(.minimal-footer) {
     height: 100%;
     object-fit: cover;
     object-position: center top;
+    background: var(--color-navy-medium);
+}
+
+/* Broken image fallback - prevent layout collapse */
+img {
+    min-height: 1px;
+}
+
+img[src=""],
+img:not([src]) {
+    visibility: hidden;
+}
+
+.subpage-hero__bg,
+.team-hero__bg {
+    background-color: var(--color-navy-deep);
 }
 
 /* ===================
