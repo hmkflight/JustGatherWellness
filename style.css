@@ -1667,6 +1667,41 @@ img:not([src]) {
     margin-bottom: var(--space-md);
 }
 
+/* CTA Section with Background Image */
+.cta-section--with-bg {
+    position: relative;
+    background: transparent;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-section__bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.cta-section__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(26,41,56,0.75) 0%, rgba(26,41,56,0.85) 100%);
+    z-index: 1;
+}
+
+.cta-section--with-bg .cta-section__inner {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-section--with-bg .cta-section__inner h2,
+.cta-section--with-bg .cta-section__inner p {
+    color: var(--color-text-primary);
+}
+
 /* Subpage Responsive */
 @media (max-width: 768px) {
     .subpage-hero {
