@@ -371,6 +371,10 @@ nav {
     background: linear-gradient(180deg, rgba(26,41,56,0.65) 0%, rgba(26,41,56,0.75) 100%);
 }
 
+.hero-section3--scenery2 {
+    background-image: url("/Assets/images/places-backgrounds/scenery2.JPG");
+}
+
 .hero-section-img {
     display: flex;
     justify-content: center;
@@ -1197,6 +1201,11 @@ footer:not(.minimal-footer) {
     object-fit: cover;
     object-position: center top;
     background: var(--color-navy-medium);
+}
+
+.team-card--mbk .team-card__image {
+    object-fit: contain;
+    object-position: center center;
 }
 
 /* Broken image fallback - prevent layout collapse */
