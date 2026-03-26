@@ -3,14 +3,14 @@ var menu = document.querySelector(".ri-menu-line");
 var close = document.querySelector(".ri-close-line");
 var navbar = document.querySelector(".subnav");
 
-if (menu) {
+if (menu && navbar) {
     menu.addEventListener("click", function() {
-        navbar.style.top = "0%";
+        navbar.classList.add("is-open");
     });
 }
 
-if (close) {
+if (close && navbar) {
     close.addEventListener("click", function() {
-        navbar.style.top = "-109%";
+        navbar.classList.remove("is-open");
     });
 }

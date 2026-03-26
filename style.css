@@ -271,15 +271,23 @@ nav {
     padding: 4rem 2rem;
     height: 100vh;
     width: 100vw;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 1.5rem;
     position: fixed;
-    top: -109%;
-    z-index: 99;
+    top: 0;
+    left: 0;
+    z-index: 999;
     background-color: rgba(26, 41, 56, 0.98);
     backdrop-filter: blur(40px);
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+    transform: translateY(-110%);
+    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    pointer-events: none;
+}
+
+.subnav.is-open {
+    transform: translateY(0);
+    pointer-events: all;
 }
 
 .subnav i {
