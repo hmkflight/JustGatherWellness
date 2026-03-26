@@ -51,13 +51,15 @@ if (close) {
 var Store = document.querySelector("#Store");
 var hovermenu = document.querySelector(".nav3");
 
-Store.addEventListener("mousemove",function(){
-  hovermenu.style.top="5%";
-})
+if (Store) {
+  Store.addEventListener("mousemove",function(){
+    hovermenu.style.top="5%";
+  })
 
-Store.addEventListener("mouseleave",function(){
-  hovermenu.style.top="-100%";
-})
+  Store.addEventListener("mouseleave",function(){
+    hovermenu.style.top="-100%";
+  })
+}
 
 
 // ==========================================
