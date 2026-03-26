@@ -805,6 +805,25 @@ footer:not(.minimal-footer) {
         color: var(--color-text-primary);
     }
 
+    .nav-donate-mobile {
+        display: inline-flex !important;
+        align-items: center;
+        background-color: var(--color-accent);
+        color: #fff !important;
+        padding: 0.45rem 1.1rem !important;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+    }
+
+    .nav-donate-mobile:hover {
+        background-color: var(--color-accent-dark, var(--color-accent));
+        opacity: 0.88;
+    }
+
     .cta-logo {
         width: clamp(60px, 15vw, 100px);
         margin-bottom: var(--space-md);

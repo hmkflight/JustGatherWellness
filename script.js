@@ -35,13 +35,17 @@ var menu = document.querySelector(".ri-menu-line");
 var close = document.querySelector(".ri-close-line");
 var navbar = document.querySelector(".subnav");
 
-menu.addEventListener("click",function(){
-  navbar.style.top="0%";
-})
+if (menu) {
+  menu.addEventListener("click",function(){
+    navbar.style.top="0%";
+  })
+}
 
-close.addEventListener("click",function(){
-  navbar.style.top="-109%";
-})
+if (close) {
+  close.addEventListener("click",function(){
+    navbar.style.top="-109%";
+  })
+}
 
 
 var Store = document.querySelector("#Store");
