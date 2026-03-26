@@ -21,13 +21,13 @@
 
     if (menuIcon && subnav) {
         menuIcon.addEventListener('click', function() {
-            subnav.style.top = '0%';
+            subnav.classList.add('is-open');
         });
     }
 
     if (closeIcon && subnav) {
         closeIcon.addEventListener('click', function() {
-            subnav.style.top = '-109%';
+            subnav.classList.remove('is-open');
         });
     }
 
