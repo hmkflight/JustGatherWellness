@@ -821,20 +821,21 @@ footer:not(.minimal-footer) {
         display: inline-flex !important;
         align-items: center;
         background-color: #ffffff;
-        color: var(--color-bg-primary, #1a2938) !important;
-        padding: 0.45rem 1.2rem !important;
-        border-radius: 999px;
-        font-size: 0.85rem;
+        color: #1a2938 !important;
+        padding: 0.6rem 1.4rem !important;
+        border-radius: var(--radius-full);
+        font-size: 0.9rem;
         font-weight: 600;
         text-decoration: none;
-        letter-spacing: 0.03em;
         white-space: nowrap;
-        border: 2px solid #ffffff;
+        border: 1px solid #ffffff;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        transition: var(--transition-base);
     }
 
     .nav-donate-mobile:hover {
-        background-color: transparent;
-        color: #ffffff !important;
+        background-color: rgba(255,255,255,0.85);
+        transform: translateY(-1px);
     }
 
     .cta-logo {
