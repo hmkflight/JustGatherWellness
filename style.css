@@ -200,6 +200,10 @@ nav {
     transition: var(--transition-base);
 }
 
+.nav-donate-mobile {
+    display: none;
+}
+
 .nav-items i:hover {
     color: var(--color-text-primary);
 }
@@ -816,20 +820,21 @@ footer:not(.minimal-footer) {
     .nav-donate-mobile {
         display: inline-flex !important;
         align-items: center;
-        background-color: var(--color-accent);
-        color: #fff !important;
-        padding: 0.45rem 1.1rem !important;
+        background-color: #ffffff;
+        color: var(--color-bg-primary, #1a2938) !important;
+        padding: 0.45rem 1.2rem !important;
         border-radius: 999px;
         font-size: 0.85rem;
         font-weight: 600;
         text-decoration: none;
         letter-spacing: 0.03em;
         white-space: nowrap;
+        border: 2px solid #ffffff;
     }
 
     .nav-donate-mobile:hover {
-        background-color: var(--color-accent-dark, var(--color-accent));
-        opacity: 0.88;
+        background-color: transparent;
+        color: #ffffff !important;
     }
 
     .cta-logo {
@@ -2249,6 +2254,7 @@ body.donate-modal-open {
     font-size: var(--text-sm);
     color: var(--color-text-secondary);
     line-height: 1.4;
+    text-wrap: balance;
 }
 
 .donate-page-custom {
