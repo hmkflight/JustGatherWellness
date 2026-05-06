@@ -376,40 +376,42 @@
         <!-- ── EVENT POPUP ── -->
         <style>
             #event-popup-overlay {
-                display: none; position: fixed;
-                top: 0; left: 0; width: 100%; height: 100%;
-                z-index: 99999;
-                background: rgba(0,0,0,0.78);
-                align-items: center; justify-content: center;
-                padding: 20px; box-sizing: border-box;
+                display: none;
+                position: fixed;
+                top: 0; left: 0;
+                width: 100vw; height: 100vh;
+                z-index: 999999;
+                background: rgba(0,0,0,0.82);
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                box-sizing: border-box;
+                transform: none !important;
             }
             #event-popup-overlay.active { display: flex; }
             #event-popup-inner { position: relative; max-width: 460px; width: 100%; }
             #event-popup-close {
                 position: absolute; top: -16px; right: -16px;
-                width: 36px; height: 36px; border-radius: 50%;
-                background: #fff; border: none; font-size: 1.2rem; font-weight: 700;
+                width: 38px; height: 38px; border-radius: 50%;
+                background: #fff; border: none; font-size: 1.3rem; font-weight: 700;
                 cursor: pointer; color: #1a2938; z-index: 1;
-                box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+                box-shadow: 0 2px 12px rgba(0,0,0,0.4);
                 display: flex; align-items: center; justify-content: center;
             }
             #event-popup-img { width: 100%; border-radius: 12px; display: block; box-shadow: 0 8px 40px rgba(0,0,0,0.6); }
         </style>
-        <div id="event-popup-overlay">
-            <div id="event-popup-inner">
-                <button id="event-popup-close" aria-label="Close">&times;</button>
-                <img id="event-popup-img" src="Assests/images/art-of-being-popup.jpg" alt="The Art of Being – Friday May 8th">
-            </div>
-        </div>
         <script>
         (function(){
             var EXPIRY = new Date('2026-05-09T23:59:59');
             if(new Date() > EXPIRY) return;
             setTimeout(function(){
-                var overlay = document.getElementById('event-popup-overlay');
+                var overlay = document.createElement('div');
+                overlay.id = 'event-popup-overlay';
+                overlay.innerHTML = '<div id="event-popup-inner"><button id="event-popup-close" aria-label="Close">&times;</button><img id="event-popup-img" src="Assests/images/art-of-being-popup.jpg" alt="The Art of Being \u2013 Friday May 8th"></div>';
+                document.body.appendChild(overlay);
                 overlay.classList.add('active');
-                document.getElementById('event-popup-close').onclick = function(){ overlay.classList.remove('active'); };
-                overlay.addEventListener('click', function(e){ if(e.target===overlay) overlay.classList.remove('active'); });
+                overlay.querySelector('#event-popup-close').onclick = function(){ overlay.classList.remove('active'); };
+                overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.classList.remove('active'); });
             }, 3000);
         })();
         </script>
